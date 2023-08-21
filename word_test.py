@@ -1,8 +1,8 @@
-from decorator import deco, word
+from decorator import line_wrapper, word
 
 prefix = "pre"
 
-@deco
+@line_wrapper
 def prefix_ct(word, prefix):
     try:
         count = 0
@@ -13,7 +13,7 @@ def prefix_ct(word, prefix):
     except (TypeError,ValueError) as err:
         print(f"1. The variable word or prefix must be a string 2. {err}")
 
-def main():
+def main(word):
     prefix_ct(word,prefix)
 
 if __name__ == "__main__":
