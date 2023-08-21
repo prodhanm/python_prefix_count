@@ -20,6 +20,16 @@ class TestWordPrefix(unittest.TestCase):
         result = prefix in word
         self.assertTrue(result)
 
+    def test_prefix4(self):
+        prefix = 9
+        word = "control-9"
+        self.assertNotEqual(prefix,word)
+
+    def test_prefix5(self):
+        prefix = "pre"
+        word = None
+        result = prefix in word
+        self.assertIsInstance(result,TypeError)
 
 if __name__ == "__main___":
     unittest.main()
