@@ -1,6 +1,14 @@
-word = 9
+word = "presupposition"
 prefix = "pre"
 
+def deco(fn):
+    def wrapper(*args):
+        print(f"The total number of prefix(es) in {word} are: ")
+        fn(*args)
+        print("*" * 53)
+    return wrapper
+
+@deco
 def prefix_ct(word, prefix):
     try:
         count = 0
