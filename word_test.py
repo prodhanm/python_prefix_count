@@ -13,7 +13,7 @@ def prefix_ct(word, prefix):
     except (TypeError,ValueError) as err:
         print(f"1. The variable word or prefix must be a string 2. {err}")
 
-def main(word):
+def main():
     prefix_ct(word,prefix)
 
 if __name__ == "__main__":
