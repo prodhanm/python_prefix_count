@@ -1,12 +1,6 @@
-word = "presupposition"
-prefix = "pre"
+from decorator import deco, word
 
-def deco(fn):
-    def wrapper(*args):
-        print(f"The total number of prefix(es) in {word} are: ")
-        fn(*args)
-        print("*" * 53)
-    return wrapper
+prefix = "pre"
 
 @deco
 def prefix_ct(word, prefix):
@@ -20,7 +14,7 @@ def prefix_ct(word, prefix):
         print(f"1. The variable word or prefix must be a string 2. {err}")
 
 def main():
-    prefix_ct(word, prefix)
+    prefix_ct(word,prefix)
 
 if __name__ == "__main__":
     main() 
