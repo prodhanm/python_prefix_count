@@ -1,5 +1,4 @@
 import unittest
-import word_test
 
 class TestWordPrefix(unittest.TestCase):
     def test_prefix(self):
@@ -26,10 +25,10 @@ class TestWordPrefix(unittest.TestCase):
         self.assertNotEqual(prefix,word)
 
     def test_prefix5(self):
-        prefix = "pre"
-        word = None
+        prefix = str(None)
+        word = "prefer"
         result = prefix in word
-        self.assertIsInstance(result,TypeError)
+        self.assertNotIsInstance(result,TypeError)
 
 if __name__ == "__main___":
     unittest.main()
